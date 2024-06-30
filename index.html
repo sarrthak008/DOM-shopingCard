@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+
+        #main{
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+         
+        #main h1{
+            font-size: 4vw;
+            font-weight: 900;
+        }
+
+        #img-div{
+            height: 50vh;
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #img-div img{
+            height: 100%;
+            cursor: pointer;
+        }
+
+        #img-container{
+            height: 10vh;
+            width: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #img-container div{
+            height: 100%;
+            width: 15vw;
+        }
+
+        #img-container div img{
+            height: 100%;
+            cursor: pointer; 
+            box-shadow:1px 1px 5px rgb(224, 222, 222) ;
+        }
+       
+       @media screen and (max-width:480px){
+            
+        #main h1{
+            font-size: 10vw;
+        }
+
+        #img-div{
+            height: 30vh;
+            width: 50vw;
+        }
+
+        #img-container{
+            height: 10vh;
+            width: 95vw;
+        }
+
+        #img-container div img{
+            width: 60%;
+        }
+
+       }
+
+    </style>
+</head>
+<body>
+     <div id="main">
+           <h1>See the sides..</h1>
+            <div id="img-div">
+                 <img src="./img1.jpg" alt="" id="mainImg">
+            </div>
+            <div id="img-container">
+                 <div>
+                     <img src="./img1.jpg" alt="" onclick="openImage('img1.jpg')">
+                 </div>
+                 <div>
+                    <img src="./img2.jpg" alt="" onclick="openImage('img2.jpg')">
+                 </div>
+                 <div>
+                    <img src="./img3.jpg" alt="" onclick="openImage('img3.jpg')">
+                 </div>
+                 <div>
+                    <img src="./img4.jpg" alt="" onclick="openImage('img4.jpg')">
+                 </div>
+                 <div>
+                    <img src="./img5.jpg" alt="" onclick="openImage('img5.jpg')">
+                 </div>
+            </div>
+     </div>
+
+    <script>
+         function openImage(source){
+             let img = document.getElementById("mainImg")
+              img.src =`${source}`
+         }
+    </script>
+</body>
+</html>
